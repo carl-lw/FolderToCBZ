@@ -455,10 +455,10 @@ status_label = tk.Label(root, text="", font=("Arial", 10))
 status_label.pack(pady=6)
 
 if not DND_AVAILABLE:
-    print("[startup] tkinterdnd2 not available; drag & drop disabled.")
+    print("[startup] tkinterdnd2 not installed; drag & drop disabled.")
 if not IMG2PDF_AVAILABLE:
     print("[startup] img2pdf not installed; PDF export disabled.")
 if not RAR_PATH:
-    print("[startup] 'rar' not found on PATH; CBR (real RAR) disabled.")
+    print("[startup] 'rar' not found on PATH; CBR export disabled.")
 
 root.mainloop()
