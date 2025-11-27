@@ -20,7 +20,7 @@ Convert folder structures with image files such as .jpg to .cbz. Useful for Mang
    - Prefix/Suffix: add a customised prefix or suffix to file/files
 
 3. **Preview**
-   - Click "Preview" to see how folders will be renamed  
+   - Click "Preview renaming" to see how folders will be renamed  
 
 4. **Convert**
    - Click "Convert to .cbz" to compress and convert folders into `.cbz`
