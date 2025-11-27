@@ -14,12 +14,12 @@ v1.0
 v1.1
 - Changed the handling for browsing files so files can be batch selected
 - Now also supports converting to CBR and PDF
-- Changed how files are handled for increased convertion speed
+- Changed how files are handled for increased conversion speed
 - Added extended regex support. Now handles Unicode.
 - Added options-menu:
   - Change output-type (CBZ, CBR, PDF)
   - Toggle for regex-handeling
-  - Toggle option for deleting folders after successful convertion
+  - Toggle option for deleting folders after successful conversion
 
 ## Usage
 
