@@ -12,13 +12,13 @@ v1.0
   - Optional prefix and suffix
 
 v1.1
-- Changed the handling for browsing files so files can be batch selected
+- Changed the handling for browsing files so multiple folders can be selected at once
 - Now also supports converting to CBR and PDF
 - Changed how files are handled for increased conversion speed
 - Added extended regex support. Now handles Unicode.
 - Added options-menu:
   - Change output-type (CBZ, CBR, PDF)
-  - Toggle for regex-handeling
+  - Toggle for regex-handling
   - Toggle option for deleting folders after successful conversion
 
 ## Usage
