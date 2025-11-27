@@ -17,7 +17,7 @@ v1.1
 - Changed how files are handled for increased conversion speed
 - Added extended regex support. Now handles Unicode.
 - Added options-menu:
-  - Change output-type (CBZ, CBR, PDF)
+  - Change output-format (CBZ, CBR, PDF)
   - Toggle for regex-handling
   - Toggle option for deleting folders after successful conversion
 
