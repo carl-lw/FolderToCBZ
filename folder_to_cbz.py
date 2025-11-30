@@ -47,6 +47,26 @@ def drop_event(event):
             folder_list.insert(tk.END, path)
 
 digit_re = re.compile(r'(\d+)')
+
+def center_window(parent, window):
+    window.update_idletasks()  # Ensure geometry is ready
+
+    # Parent geometry
+    px = parent.winfo_x()
+    py = parent.winfo_y()
+    pw = parent.winfo_width()
+    ph = parent.winfo_height()
+
+    # Window geometry
+    ww = window.winfo_width()
+    wh = window.winfo_height()
+
+    # Compute centered position
+    x = px + (pw // 2) - (ww // 2)
+    y = py + (ph // 2) - (wh // 2)
+
+    window.geometry(f"+{x}+{y}")
+
 def natural_sort_key(s):
     parts = digit_re.split(s)
     key = []
@@ -63,6 +83,18 @@ def find_rar_executable():
         path = shutil.which(name)
         if path:
             return path
+
+    common_dirs = [
+        r"C:\Program Files\WinRAR",
+        r"C:\Program Files (x86)\WinRAR",
+    ]
+
+    for folder in common_dirs:
+        for name in candidates:
+            full = os.path.join(folder, name)
+            if os.path.isfile(full):
+                return full
+    
     return None
 
 RAR_PATH = find_rar_executable()
@@ -168,9 +200,11 @@ def open_multi_folder_dialog():
     dlg.geometry("600x400")
     dlg.transient(root)
     dlg.grab_set()
-
+    
     tree = ttk.Treeview(dlg)
     tree.pack(fill="both", expand=True)
+
+    center_window(root, dlg)
 
     # Populate tree with directories
     def insert_node(parent, path):
@@ -249,6 +283,8 @@ def open_options():
     dlg.resizable(False, False)
     dlg.transient(root)
     dlg.grab_set()
+
+    center_window(root, dlg)
 
     tk.Label(dlg, text="Output format:", font=("Arial", 11)).pack(anchor="w", padx=12, pady=(10,2))
     formats_frame = tk.Frame(dlg)
