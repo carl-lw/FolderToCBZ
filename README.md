@@ -21,6 +21,10 @@ v1.1
   - Toggle for regex-handling
   - Toggle option for deleting folders after successful conversion
 
+v1.2
+- Made a change so that WinRAR is found for standard pathways in Windows
+- Minor UI changes
+
 ## Usage
 
 1. **Select folders**
